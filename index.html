@@ -1,42 +1,70 @@
-
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+<link rel="icon" href="https://cdn.glitch.global/72ea2556-58ef-468a-a8bc-16decd6480e3/logo.jpg?v=1683810400062" type="image/x-icon">
+    <title>Nitrogen Math</title>
+    <meta name="description" content="Nitrogen Math Powered By Ultraviolet"
+    />
+    <meta
+      name="keywords"
+      content=""
+    />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: dark)"
+      content="#000000"
+    />
+    <meta name="googlebot" content="index, follow, snippet" />
+    <link rel="shortcut icon" content="favicon.ico" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="uv/uv.bundle.js" defer></script>
+    <script src="uv/uv.config.js" defer></script>
+    <script src="register-sw.js" defer></script>
+    <script src="search.js" defer></script>
+    <script src="index.js" defer></script>
+  </head>
 
-<head>
-    <meta charset="utf-8">
-      
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Classes</title>
-    <link rel="icon" type="image/x-icon" href="https://ssl.gstatic.com/classroom/favicon.png">  
-    <meta name="description" content="PR" />
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#434c5e">
-    <meta name="googlebot" content="noindex, follow, snippet" />
-    <link href="index.css" rel="stylesheet">
-
-    <style type="text/css">
-      
-</head>
-
-<body>
-
-
-    <div title="" class="logo-wrapper">
-        <div clas="logo">
-          <img class="logo" src="cdn.glitch.global/72ea2556-58ef-468a-a8bc-16decd6480e3/logo.jpg?v=1683810400062">
-            alt="" />
- 
-        </div>
-        <h1>Nitrogen Math</h1>
+  <body>
+    <div
+      title=""
+      class="flex-center logo-wrapper header-center"
+    >
+      <img class="logo" src="https://cdn.glitch.global/72ea2556-58ef-468a-a8bc-16decd6480e3/logo.jpg?v=1683810400062" alt="Ultraviolet" />
+      <h1>Nitrogen Math</h1>
     </div>
-    <form>
-        <input title="Google Search" placeholder="Browse Now">
+    <div class="flex-center desc">
+    </div>
+
+    <form id="uv-form" class="flex-center">
+      <input
+        id="uv-search-engine"
+        value="https://www.google.com/search?q=%s"
+        type="hidden"
+      />
+      <input id="uv-address" type="text" placeholder="Browse the web freely" />
     </form>
+    <div class="desc left-margin">
+      <p id="uv-error"></p>
+      <pre id="uv-error-code"></pre>
+    </div>
+    <script>
+  function updateTime() {
+  var widget = document.getElementById("timetxt");
+  var now = new Date();
+  var date = now.toDateString();
+  var time = now.toLocaleTimeString();
+  widget.innerHTML =  time +"<br>" +  date;
+}
 
+setInterval(updateTime, 1000);
+</script>
     <footer>
-   </footer>
-
-     <script src="uv/uv.bundle.js"></script>
-    <script src="uv/uv.config.js"></script>
-    <script src="index.js"></script>
-    
+          <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+    </footer>
+  </body>
 </html>
